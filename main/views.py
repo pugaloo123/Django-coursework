@@ -5,12 +5,15 @@ from django.shortcuts import render
 # Create your tests here.
 def index(request):
     context = {
-        'title': 'Home',
-        'content': 'Главная страница магазина - Home',
-        'is_authenticated': False,
-        'info': 'Nikita'
+        'title': 'Home - Главная',
+        'content': 'Магазин мебели HOME',
     }
     return render(request, 'main/index.html', context=context)
 
 def about(request):
-    return HttpResponse('About page')
+    context = {
+        'title': 'Home - О нас',
+        'content': 'О нас',
+        'text_on_page': 'Текст о том почему этот магазин такой классный, и какой хороший товар'
+    }
+    return render(request, 'main/about.html', context)
