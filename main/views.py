@@ -5,14 +5,9 @@ from goods.models import Categories
 
 # Create your tests here.
 def index(request):
-
-    categories = Categories.objects.all()
-
-
     context = {
         'title': 'Home - Главная',
         'content': 'Магазин мебели HOME',
-        'categories': categories,
     }
     return render(request, 'main/index.html', context=context)
 
