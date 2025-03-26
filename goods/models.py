@@ -1,6 +1,4 @@
 from email.mime import image
-from encodings.punycode import T
-from re import M
 from unicodedata import category
 from django.db import models
 
